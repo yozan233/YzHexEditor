@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0087FF</color>
+    <color name="colorPrimaryVariant">#167DD8</color>
+    <color name="colorSecondary">#FF03DAC5</color>
+    <color name="colorSecondaryVariant">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="black_3333">#333</color>
+    <color name="grey_5555">#555</color>
+    <color name="grey_9999">#999</color>
+    <color name="grey_dddd">#ddd</color>
+    <color name="grey_eeee">#eee</color>
+    <color name="white_f8f8">#f8f8f8</color>
+
+</resources>

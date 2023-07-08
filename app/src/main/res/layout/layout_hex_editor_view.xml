@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layout_head_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.peke.hex.editor.widget.HexDataHeadView
+            android:id="@+id/hexDataHeadView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="#ddd"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_data_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hex_editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            tools:itemCount="50"
+            tools:listitem="@layout/listitem_hex_data"/>
+
+        <View
+            android:id="@+id/v_cursor_start"
+            android:layout_width="20dp"
+            android:layout_height="32dp"
+            android:alpha="0.7"
+            android:background="@drawable/ic_text_cursor_left"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/v_cursor_end"
+            android:layout_width="20dp"
+            android:layout_height="32dp"
+            android:alpha="0.7"
+            android:background="@drawable/ic_text_cursor_right"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            tools:layout_marginStart="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/vScrollBar"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <View
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                tools:background="#F0D5D5D5"
+                android:background="@drawable/text_color_hex_data_scroll_bar" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.peke.hex.editor.widget.SquareLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_loading"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/load"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:indicatorColor="#fff"
+                    app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_loading_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/reading_file"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+            </com.peke.hex.editor.widget.SquareLinearLayout>
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

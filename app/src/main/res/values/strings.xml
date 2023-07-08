@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Yz十六进制编辑器</string>
+
+    <string name="select_file">选择文件</string>
+    <string name="hex_editor">十六进制编辑器</string>
+    <string name="reading_file">正在读取...</string>
+    <string name="can_not_read_file">无法读取文件</string>
+    <string name="read_file_failed">读取文件失败</string>
+    <string name="searching">正在搜索...</string>
+    <string name="no_match_data">没有查找到匹配数据</string>
+    <string name="previous_one">上一个</string>
+    <string name="next_one">下一个</string>
+    <string name="saving">正在保存...</string>
+    <string name="save_success">保存成功</string>
+    <string name="no_import_file">未导入文件</string>
+    <string name="double_click_back_key_exit">再按一次退出</string>
+    <string name="go_to_offset">跳转到...</string>
+    <string name="search_data">搜索数据</string>
+    <string name="input_hex_data">请输入十六进制数据</string>
+    <string name="input_start_offset">输入开始地址</string>
+    <string name="input_end_offset">输入结束地址</string>
+    <string name="start_address_error">开始地址不能大于结束地址</string>
+    <string name="end_address_error">结束地址不能小于开始地址</string>
+    <string name="copy">复制</string>
+    <string name="paste">粘贴</string>
+    <string name="search">搜索</string>
+    <string name="save">保存</string>
+    <string name="no_selected_data">未选中数据</string>
+    <string name="no_paste_position">未指定粘贴位置</string>
+    <string name="copy_data_to">复制到...</string>
+    <string name="paste_data_from">粘贴从...</string>
+    <string name="copy_type_1">复制数据到内置剪贴板</string>
+    <string name="copy_type_1_desc">复制十六进制数据到app内置剪贴板，支持复制大量数据</string>
+    <string name="copy_type_2">复制数据到系统剪贴板</string>
+    <string name="copy_type_2_desc">复制十六进制数据值到系统剪贴板，不支持复制大量数据</string>
+    <string name="copy_type_3">复制显示内容到系统剪贴板</string>
+    <string name="copy_type_3_desc">复制编辑器显示内容到系统剪贴板，不支持复制大量数据</string>
+    <string name="copy_success">复制成功</string>
+    <string name="copy_failed">复制失败</string>
+    <string name="paste_type_1">从内置剪贴板粘贴</string>
+    <string name="paste_type_1_desc">从app内置剪贴板粘贴十六进制数据</string>
+    <string name="paste_type_2">从系统剪贴板粘贴</string>
+    <string name="paste_type_2_desc">从系统剪贴板粘贴十六进制数据，自动过滤不正确的字符</string>
+    <string name="clipboard_is_empty">剪贴板内容为空</string>
+
+</resources>

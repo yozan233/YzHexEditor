@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="#F5F5F5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/hex_editor"
+            android:textColor="@color/black_3333"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="12dp"
+            android:alpha="0.4"
+            android:src="@drawable/ic_undo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_redo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="12dp"
+            android:alpha="0.4"
+            android:src="@drawable/ic_redo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_more"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CDE1FF"
+        android:textColor="@color/black_3333"
+        android:textSize="14sp"
+        android:padding="3dp"
+        tools:text="文件名.gba"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_data_main"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layout_editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:id="@+id/layout_not_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:textColor="@color/grey_9999"
+                android:textSize="17sp"
+                android:text="@string/can_not_read_file"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="#ddd"/>
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginTop="5dp">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_search_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/grey_5555"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/previous_one"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_search_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/grey_5555"
+                android:background="?attr/selectableItemBackground"
+                android:text="@string/previous_one"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_data_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="#ddd"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/et_data_index_1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_line"
+                android:textSize="16sp"
+                android:textColor="@color/grey_5555"
+                android:gravity="center"
+                tools:text="0000"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="&lt;-&gt;"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/et_data_index_2"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_line"
+                android:textSize="16sp"
+                android:textColor="@color/grey_5555"
+                android:gravity="center"
+                tools:text="0000"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="#ddd"/>
+        <com.peke.hex.editor.widget.HexEditorKeyBoard
+            android:id="@+id/mKeyBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
